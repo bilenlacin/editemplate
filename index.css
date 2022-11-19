@@ -439,9 +439,21 @@ body {
     position: fixed;
     display: flex;
     align-items: center;
-    padding: 8px 0 8px 15px;
+    justify-content: space-between;
+    padding: 8px 15px 8px 15px;
     width: calc(100vw - 600px);
     z-index: 1;
+}
+
+.toolbar .dropdown .dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333333;
+    white-space: nowrap;
+    text-decoration: none;
 }
 
 .toolbar-add-button {
@@ -467,22 +479,29 @@ body {
 .toolbar .dropdown button {
     width: 130px;
     height: 24px;
-    padding: 0.1rem 2.25rem 0.1rem 0.75rem;
+    padding: 0.1rem 0.75rem 0.1rem 0.75rem;
     font-size: 12px;
-    border: 0.6px solid #c0c0c0;
+    border: 1px solid #c0c0c0;
     color: #737475;
     font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.toolbar .dropdown-menu.show {
+    transform: translate3d(0px, 30px, 0px) !important;
 }
 
 .toolbar .text-size {
     width: 53px;
     height: 24px;
     outline: none;
-    border-radius: 7px;
-    border: 0.6px solid #c0c0c0;
+    border-radius: 6px;
+    border: 1px solid #c0c0c0;
     font-size: 12px;
     padding-inline: 5px;
     margin-right: 5px;
+    color: #737475;
 }
 
 .color-picker {
@@ -518,8 +537,16 @@ body {
     transition: 0.2ms;
 }
 
-.toolbar-button {
+.toolbar > div:first-child > .toolbar-button:not(.enabled) {
     background-color: #d7d7d7;
+}
+
+.toolbar > div:nth-child(2) > .toolbar-button {
+    margin-right: 0px;
+}
+
+.toolbar > div:nth-child(2) > .toolbar-button:hover {
+    background-color: #e0e0e0;
 }
 
 .toolbar-button.enabled:not(:last-child) {
@@ -651,7 +678,6 @@ body {
     position: fixed;
     top: 91px;
     width: 190px;
-    z-index: 1;
     left: 300px;
 }
 
@@ -1097,6 +1123,7 @@ https://toughengineer.github.io/demo/slider-styler*/
 input[type="range"].styled-slider {
     height: 0.9em;
     -webkit-appearance: none;
+    background-color: transparent;
 }
 
 input[type="range"].styled-slider:hover {
@@ -1295,13 +1322,19 @@ input[type="range"].styled-slider::-ms-track {
 }
 
 .footer-toolbar .btn-group button:hover,
-.footer-toolbar button:hover {
+.footer-toolbar button:hover,
+.footer-toolbar .btn-container.active button {
     background-color: #e0e0e0;
 }
 
 .footer-toolbar .dropdown-menu.show {
     min-width: fit-content;
     transform: translate3d(-5px, -20px, 0px) !important;
+}
+
+.swal2-actions button {
+    border-radius: 7px !important;
+    padding: 0.2em 1.1em !important;
 }
 
 @media screen and (min-device-width: 1920px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) /* @media only screen and (min-width: 1920px) and (max-width: 2560px) */ {
@@ -1408,7 +1441,7 @@ input[type="range"].styled-slider::-ms-track {
     .sidebar-gallery {
         padding-top: 11px;
         top: 44px;
-        height: calc(100vh - 119px);
+        height: calc(100vh - 99px);
     }
 
     .sidebar .cardPage {
@@ -1453,8 +1486,17 @@ input[type="range"].styled-slider::-ms-track {
     }
 
     .toolbar {
-        padding: 7.212px 0px 7.212px 20px;
+        padding: 7.212px 20px 7.212px 20px;
         width: calc(100vw - 660px);
+    }
+
+    .toolbar .dropdown {
+        margin-right: 7px;
+    }
+
+    .toolbar .dropdown button {
+        font-size: 14px;
+        height: 28px;
     }
 
     .toolbar-add-button {
@@ -1481,7 +1523,10 @@ input[type="range"].styled-slider::-ms-track {
         height: 28px;
         font-size: 14px;
         margin-right: 7px;
-        border-radius: 7px;
+    }
+
+    .toolbar .dropdown-menu.show {
+        transform: translate3d(0px, 32px, 0px) !important;
     }
 
     .color-picker {
@@ -1516,7 +1561,7 @@ input[type="range"].styled-slider::-ms-track {
     }
 
     .text-align-menu {
-        top: 16px;
+        top: 8px;
         left: -38px;
         padding: 1.5px;
         border-radius: 11px;
@@ -1533,7 +1578,7 @@ input[type="range"].styled-slider::-ms-track {
         width: 12px;
         height: 12px;
         left: 8px;
-        top: 10px;
+        top: 2px;
     }
 
     .text-align-menu button {
@@ -2086,8 +2131,17 @@ input[type="range"].styled-slider::-ms-track {
     }
 
     .toolbar {
-        padding: 11px 0px 11px 20px;
+        padding: 11px 20px 11px 20px;
         width: calc(100vw - 800px);
+    }
+
+    .toolbar .dropdown {
+        margin-right: 7px;
+    }
+
+    .toolbar .dropdown button {
+        font-size: 14px;
+        height: 32px;
     }
 
     .toolbar-add-button {
@@ -2114,7 +2168,10 @@ input[type="range"].styled-slider::-ms-track {
         height: 32px;
         font-size: 16px;
         margin-right: 7px;
-        border-radius: 9px;
+    }
+
+    .toolbar .dropdown-menu.show {
+        transform: translate3d(0px, 35px, 0px) !important;
     }
 
     .color-picker {

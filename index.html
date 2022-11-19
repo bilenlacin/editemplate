@@ -11,6 +11,11 @@
             integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
             crossorigin="anonymous"
         />
+        <link
+            href="https://fonts.googleapis.com/css?family=Abril+Fatface|Acme|Aleo:300,300i,400,400i,700,700i|Alex+Brush|Alfa+Slab+One|Allura|Amaranth:400,400i,700,700i|Amatic+SC:400,700|Architects+Daughter|Archivo+Narrow:400,400i,500,500i,600,600i,700,700i|Baloo+Paaji|Bangers|Bebas+Neue|Bellefair|Black+Ops+One|Bubblegum+Sans|Cabin+Sketch:400,700|Calistoga|Carter+One|Caveat:400,700|Cinzel:400,700,900|Clicker+Script|Codystar:300,400|Comfortaa:300,400,500,600,700|Cookie|Courgette|Creepster|DM+Serif+Display:400,400i|Dancing+Script:400,700|Didact+Gothic|Dosis:200,300,400,500,600,700,800|Elsie:400,900|Emilys+Candy|Euphoria+Script|Farsan|Faster+One|Fredericka+the+Great|Fredoka+One|Gabriela|Graduate|Grand+Hotel|Great+Vibes|Griffy|Handlee|Happy+Monkey|Hi+Melody|IM+Fell+DW+Pica+SC|IM+Fell+French+Canon+SC|IM+Fell+Great+Primer:400,400i|Indie+Flower|Irish+Grover|Italianno|Itim|Kadwa:400,700|Kalam:300,400,700|Katibeh|Kurale|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Libre+Baskerville:400,400i,700|Life+Savers:400,700,800|Lilita+One|Lobster|Lobster+Two:400,400i,700,700i|Londrina+Solid:100,300,400,900|Love+Ya+Like+A+Sister|Luckiest+Guy|Maiden+Orange|Medula+One|Modak|Mountains+of+Christmas:400,700|Niconne|Norican|Noto+Serif:400,400i,700,700i|Old+Standard+TT:400,400i,700|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Passion+One|Patrick+Hand|Patrick+Hand+SC|Pattaya|Peralta|Pinyon+Script|Playball|Playfair+Display|Playfair+Display+SC|Pompiere|Purple+Purse|Quando|Quattrocento:400,700|Racing+Sans+One|Ribeye|Ribeye+Marrow|Risque|Rochester|Rouge+Script|Rum+Raisin|Sacramento|Satisfy|Signika:300,400,600,700|Sofia|Solway:300,400,500,700,800|Special+Elite|Spicy+Rice|Spirax|Stardos+Stencil:400,700|Titan+One|UnifrakturMaguntia|Vast+Shadow|Vibur|Vidaloka|Yellowtail&display=swap"
+            rel="stylesheet"
+        />
+
         <title>Document</title>
     </head>
     <body>
@@ -495,284 +500,2023 @@
             </div>
             <div class="middle-container">
                 <div class="toolbar">
-                    <button class="btn-pink toolbar-add-button">
-                        <span>Add Text</span>
-                    </button>
-                    <div class="dropdown">
-                        <button
-                            class="btn dropdown-toggle"
-                            type="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            Select Font
+                    <div class="d-flex align-items-center">
+                        <button class="btn-pink toolbar-add-button">
+                            <span>Add Text</span>
                         </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="#">Darken</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Multiply</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Color Burn</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Lighten</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Screen</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#"
-                                    >Color Dodge</a
+                        <div class="dropdown">
+                            <button
+                                class="btn dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Select Font
+                            </button>
+                            <ul
+                                class="dropdown-menu"
+                                aria-labelledby="selectFont"
+                            >
+                                <!-- ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Abril Fatface', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
                                 >
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Add</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Overlay</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Soft Light</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Hard Light</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Exclusion</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Difference</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Saturation</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Subtract</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Hue</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- <select
-                        class="form-select toolbar-button"
-                        aria-label="Default select example"
-                    >
-                        <option selected>Select Font</option>
-                        <option value="1">
-                            IM FELL FRENCH CANNON SC IM FELL FRENCH CANNON IM
-                            FELL FRENCH CANNON SC IM FELL FRENCH CANNON
-                        </option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select> -->
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Abril Fatface', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Abril Fatface</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Acme', sans-serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Acme', sans-serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Acme</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Aleo', serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Aleo', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Aleo</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Alex Brush', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Alex Brush', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Alex Brush</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Alfa Slab One', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Alfa Slab One', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Alfa Slab One</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Allura', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Allura', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Allura</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'AmalfiCoast'"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'AmalfiCoast'"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >AmalfiCoast</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Amaranth', sans-serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Amaranth', sans-serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Amaranth</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Amatic SC', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Amatic SC', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Amatic SC</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Architects Daughter',
+                                            cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Architects Daughter', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Architects Daughter</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Archivo Narrow',
+                                            sans-serif;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Archivo Narrow', sans-serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Archivo Narrow</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'BabyCurls'"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'BabyCurls'"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >BabyCurls</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Baloo Paaji', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Baloo Paaji', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Baloo Paaji</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Bangers', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Bangers', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Bangers</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Baskerville'"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Baskerville'"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Baskerville</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Baskerville-Italic'"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Baskerville-Italic'"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Baskerville-Italic</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Bebas Neue', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Bebas Neue', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Bebas Neue</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Bellefair', serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Bellefair', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Bellefair</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Black Ops One', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Black Ops One', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Black Ops One</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Bubblegum Sans', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Bubblegum Sans', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Bubblegum Sans</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Cabin Sketch', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Cabin Sketch', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Cabin Sketch</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Calistoga', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Calistoga', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Calistoga</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Carter One', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Carter One', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Carter One</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Caveat', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Caveat', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Caveat</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Cinzel', serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Cinzel', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Cinzel</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Clicker Script', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Clicker Script', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Clicker Script</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Codystar', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Codystar', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Codystar</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Comfortaa', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Comfortaa', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Comfortaa</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Cookie', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Cookie', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Cookie</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Courgette', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Courgette', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Courgette</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Creepster', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Creepster', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Creepster</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'DM Serif Display', serif;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'DM Serif Display', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >DM Serif Display</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'DRAguSans-Black'"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'DRAguSans-Black'"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >DRAguSans-Black</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Dancing Script', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Dancing Script', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Dancing Script</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'DarlingModern'"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'DarlingModern'"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >DarlingModern</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Didact Gothic', sans-serif;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Didact Gothic', sans-serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Didact Gothic</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Dosis', sans-serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Dosis', sans-serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Dosis</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Elsie', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Elsie', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Elsie</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Emilys Candy', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Emilys Candy', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Emilys Candy</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Euphoria Script', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Euphoria Script', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Euphoria Script</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Farsan', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Farsan', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Farsan</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Faster One', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Faster One', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Faster One</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Fredericka the Great',
+                                            cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Fredericka the Great', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Fredericka the Great</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Fredoka One', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Fredoka One', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Fredoka One</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Gabriela', serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Gabriela', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Gabriela</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Graduate', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Graduate', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Graduate</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Grand Hotel', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Grand Hotel', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Grand Hotel</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Great Vibes', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Great Vibes', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Great Vibes</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Griffy', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Griffy', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Griffy</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Handlee', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Handlee', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Handlee</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Happy Monkey', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Happy Monkey', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Happy Monkey</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Hi Melody', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Hi Melody', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Hi Melody</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'IM Fell DW Pica SC', serif;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'IM Fell DW Pica SC', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >IM Fell DW Pica SC</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'IM Fell French Canon SC',
+                                            serif;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'IM Fell French Canon SC', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >IM Fell French Canon SC</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'IM Fell Great Primer',
+                                            serif;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'IM Fell Great Primer', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >IM Fell Great Primer</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Indie Flower', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Indie Flower', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Indie Flower</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Irish Grover', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Irish Grover', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Irish Grover</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Italianno', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Italianno', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Italianno</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Itim', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Itim', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Itim</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Kadwa', serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Kadwa', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Kadwa</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Kalam', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Kalam', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Kalam</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Katibeh', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Katibeh', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Katibeh</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Kurale', serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Kurale', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Kurale</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Lato', sans-serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Lato', sans-serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Lato</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Libre Baskerville', serif;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Libre Baskerville', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Libre Baskerville</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Life Savers', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Life Savers', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Life Savers</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Lilita One', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Lilita One', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Lilita One</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Lobster', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Lobster', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Lobster</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Lobster Two', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Lobster Two', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Lobster Two</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Londrina Solid', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Londrina Solid', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Londrina Solid</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Love Ya Like A Sister',
+                                            cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Love Ya Like A Sister', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Love Ya Like A Sister</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Luckiest Guy', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Luckiest Guy', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Luckiest Guy</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Maiden Orange', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Maiden Orange', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Maiden Orange</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Medula One', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Medula One', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Medula One</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Modak', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Modak', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Modak</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Montserrat'"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Montserrat'"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Montserrat</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'MontserratLight'"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'MontserratLight'"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >MontserratLight</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Mountains of Christmas',
+                                            cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Mountains of Christmas', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Mountains of Christmas</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Niconne', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Niconne', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Niconne</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Norican', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Norican', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Norican</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Noto Serif', serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Noto Serif', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Noto Serif', serif</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Old Standard TT', serif;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Old Standard TT', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Old Standard TT</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Open Sans', sans-serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Open Sans', sans-serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Open Sans</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'PTSerif'"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'PTSerif'"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >PTSerif</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'PTSerif-Regular'"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'PTSerif-Regular'"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >PTSerif-Regular</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Passion One', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Passion One', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Passion One</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Patrick Hand', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Patrick Hand', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Patrick Hand</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Patrick Hand SC', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Patrick Hand SC', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Patrick Hand SC</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Pattaya', sans-serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Pattaya', sans-serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Pattaya</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Peralta', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Peralta', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Peralta</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Pinyon Script', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Pinyon Script', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Pinyon Script</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Playball', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Playball', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Playball</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Playfair Display', serif;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Playfair Display', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Playfair Display</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Playfair Display SC',
+                                            serif;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Playfair Display SC', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Playfair Display SC</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Pompiere', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Pompiere', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Pompiere</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Purple Purse', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Purple Purse', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Purple Purse</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Quando', serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Quando', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Quando</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Quattrocento', serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Quattrocento', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Quattrocento</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Racing Sans One', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Racing Sans One', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Racing Sans One</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Ribeye', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Ribeye', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Ribeye</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Ribeye Marrow', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Ribeye Marrow', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Ribeye Marrow</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Risque', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Risque', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Risque</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Rochester', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Rochester', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Rochester</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Rouge Script', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Rouge Script', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Rouge Script</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Rum Raisin', sans-serif;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Rum Raisin', sans-serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Rum Raisin</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Sacramento', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Sacramento', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Sacramento</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Satisfy', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Satisfy', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Satisfy</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Signika', sans-serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Signika', sans-serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Signika</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Skinny Things'"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Skinny Things'"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Skinny Things</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Sofia', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Sofia', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Sofia</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Solway', serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Solway', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Solway</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Special Elite', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Special Elite', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Special Elite</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Spicy Rice', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Spicy Rice', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Spicy Rice</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Spirax', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Spirax', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Spirax</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'Stardos Stencil', cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Stardos Stencil', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Stardos Stencil</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Titan One', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Titan One', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Titan One</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="
+                                        font-family: 'UnifrakturMaguntia',
+                                            cursive;
+                                    "
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'UnifrakturMaguntia', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >UnifrakturMaguntia</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Vast Shadow', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Vast Shadow', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Vast Shadow</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Vibur', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Vibur', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Vibur</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Vidaloka', serif"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Vidaloka', serif"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Vidaloka</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                                <li
+                                    style="font-family: 'Yellowtail', cursive"
+                                    ng-repeat="x in fonts track by x.id"
+                                    class="ng-scope"
+                                >
+                                    <a
+                                        style="cursor: pointer"
+                                        id="'Yellowtail', cursive"
+                                        ng-click="changeTextFontFamily($event.target)"
+                                        class="ng-binding"
+                                        >Yellowtail</a
+                                    >
+                                </li>
+                                <!-- end ngRepeat: x in fonts track by x.id -->
+                            </ul>
+                        </div>
 
-                    <input
-                        class="text-size"
-                        type="number"
-                        min="0"
-                        value="100"
-                        max="2000"
-                        id="points"
-                        name="points"
-                        step="1"
-                    />
-                    <div class="d-flex">
                         <input
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="top"
-                            title="Color Picker"
-                            type="color"
-                            id="colorPicker"
-                            class="color-picker"
-                            name="head"
-                            value="#28bf33"
+                            class="text-size"
+                            type="number"
+                            min="0"
+                            value="100"
+                            max="2000"
+                            id="points"
+                            name="points"
+                            step="1"
                         />
-                    </div>
+                        <div class="d-flex">
+                            <input
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Color Picker"
+                                type="color"
+                                id="colorPicker"
+                                class="color-picker"
+                                name="head"
+                                value="#28bf33"
+                            />
+                        </div>
 
-                    <button
-                        class="toolbar-button enabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Text Bold"
-                    >
-                        <img src="/assets/icons/bold.svg" alt="" />
-                    </button>
-                    <button
-                        class="toolbar-button enabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Text Italic"
-                    >
-                        <img src="/assets/icons/italic.svg" alt="" />
-                    </button>
-                    <div class="vertical-line"></div>
-                    <button
-                        class="toolbar-button enabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Text Case"
-                    >
-                        <img src="/assets/icons/capitalize.svg" alt="" />
-                    </button>
-                    <div class="text-align">
                         <button
                             class="toolbar-button enabled"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
-                            title="Text Align"
+                            title="Text Bold"
                         >
-                            <img src="/assets/icons/align.svg" alt="" />
+                            <img src="/assets/icons/bold.svg" alt="" />
                         </button>
-
-                        <div class="header-dropdown-menu">
-                            <span class="tringle"></span>
-                            <div class="text-align-menu d-flex">
-                                <button>
-                                    <img
-                                        src="/assets/icons/left-text-align.svg"
-                                        alt=""
-                                    />
-                                </button>
-                                <button>
-                                    <img
-                                        src="/assets/icons/mid-text-align.svg"
-                                        alt=""
-                                    />
-                                </button>
-                                <button>
-                                    <img
-                                        src="/assets/icons/right-text-align.svg"
-                                        alt=""
-                                    />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-leading">
                         <button
                             class="toolbar-button enabled"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
-                            title="Text Leading"
+                            title="Text Italic"
                         >
-                            <img src="/assets/icons/text-leading.svg" alt="" />
+                            <img src="/assets/icons/italic.svg" alt="" />
                         </button>
+                        <div class="vertical-line"></div>
+                        <button
+                            class="toolbar-button enabled"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Text Case"
+                        >
+                            <img src="/assets/icons/capitalize.svg" alt="" />
+                        </button>
+                        <div class="text-align">
+                            <button
+                                class="toolbar-button enabled"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Text Align"
+                            >
+                                <img src="/assets/icons/align.svg" alt="" />
+                            </button>
 
-                        <div class="header-dropdown-menu">
-                            <span class="tringle"></span>
-                            <div class="text-align-menu d-flex flex-column">
-                                <div>
-                                    <input
-                                        type="range"
-                                        class="styled-slider"
-                                        id="customRange1"
-                                    />
-                                    <div class="range-info">
-                                        <span>Spacing</span>
-                                        <span>0</span>
-                                    </div>
+                            <div class="header-dropdown-menu">
+                                <span class="tringle"></span>
+                                <div class="text-align-menu d-flex">
+                                    <button>
+                                        <img
+                                            src="/assets/icons/left-text-align.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                    <button>
+                                        <img
+                                            src="/assets/icons/mid-text-align.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                    <button>
+                                        <img
+                                            src="/assets/icons/right-text-align.svg"
+                                            alt=""
+                                        />
+                                    </button>
                                 </div>
-                                <div>
-                                    <input
-                                        type="range"
-                                        class="styled-slider"
-                                        id="customRange1"
-                                    />
-                                    <div class="range-info">
-                                        <span>Leading</span>
-                                        <span>0</span>
+                            </div>
+                        </div>
+
+                        <div class="text-leading">
+                            <button
+                                class="toolbar-button enabled"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Text Leading"
+                            >
+                                <img
+                                    src="/assets/icons/text-leading.svg"
+                                    alt=""
+                                />
+                            </button>
+
+                            <div class="header-dropdown-menu">
+                                <span class="tringle"></span>
+                                <div class="text-align-menu d-flex flex-column">
+                                    <div>
+                                        <input
+                                            type="range"
+                                            class="styled-slider"
+                                            id="customRange1"
+                                        />
+                                        <div class="range-info">
+                                            <span>Spacing</span>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <input
+                                            type="range"
+                                            class="styled-slider"
+                                            id="customRange1"
+                                        />
+                                        <div class="range-info">
+                                            <span>Leading</span>
+                                            <span>0</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="vertical-line"></div>
-                    <button
-                        class="toolbar-button enabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Duplicate Object"
-                    >
-                        <img src="/assets/icons/duplicate.svg" alt="" />
-                    </button>
-                    <button
-                        class="toolbar-button enabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Align Vertical"
-                    >
-                        <img src="/assets/icons/align-vertical.svg" alt="" />
-                    </button>
-                    <button
-                        class="toolbar-button enabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Align Horizontal"
-                    >
-                        <img src="/assets/icons/align-horizontal.svg" alt="" />
-                    </button>
-                    <button
-                        class="toolbar-button enabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Move to Front"
-                    >
-                        <img src="/assets/icons/move-to-front.svg" alt="" />
-                    </button>
-                    <button
-                        class="toolbar-button enabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Move to Back"
-                    >
-                        <img src="/assets/icons/move-to-back.svg" alt="" />
-                    </button>
-                    <button
-                        class="toolbar-button enabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Flip Horizontal"
-                    >
-                        <img src="/assets/icons/flip-horizontal.svg" alt="" />
-                    </button>
-                    <button
-                        class="toolbar-button enabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Flip Vertical"
-                    >
-                        <img src="/assets/icons/flip-vertical.svg" alt="" />
-                    </button>
-                    <button
-                        class="toolbar-button enabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Image Crop"
-                    >
-                        <img src="/assets/icons/image-crop.svg" alt="" />
-                    </button>
-                    <button
-                        class="toolbar-button enabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Lock / Unlock"
-                    >
-                        <img src="/assets/icons/lock.svg" alt="" />
-                    </button>
-                    <button
-                        class="toolbar-button enabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Delete"
-                    >
-                        <img src="/assets/icons/delete.svg" alt="" />
-                    </button>
+                        <div class="vertical-line"></div>
+                        <button
+                            class="toolbar-button enabled"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Duplicate Object"
+                        >
+                            <img src="/assets/icons/duplicate.svg" alt="" />
+                        </button>
+                        <button
+                            class="toolbar-button enabled"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Align Vertical"
+                        >
+                            <img
+                                src="/assets/icons/align-vertical.svg"
+                                alt=""
+                            />
+                        </button>
+                        <button
+                            class="toolbar-button enabled"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Align Horizontal"
+                        >
+                            <img
+                                src="/assets/icons/align-horizontal.svg"
+                                alt=""
+                            />
+                        </button>
+                        <button
+                            class="toolbar-button enabled"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Move to Front"
+                        >
+                            <img src="/assets/icons/move-to-front.svg" alt="" />
+                        </button>
+                        <button
+                            class="toolbar-button enabled"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Move to Back"
+                        >
+                            <img src="/assets/icons/move-to-back.svg" alt="" />
+                        </button>
+                        <button
+                            class="toolbar-button enabled"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Flip Horizontal"
+                        >
+                            <img
+                                src="/assets/icons/flip-horizontal.svg"
+                                alt=""
+                            />
+                        </button>
+                        <button
+                            class="toolbar-button enabled"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Flip Vertical"
+                        >
+                            <img src="/assets/icons/flip-vertical.svg" alt="" />
+                        </button>
+                        <button
+                            class="toolbar-button enabled"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Image Crop"
+                        >
+                            <img src="/assets/icons/image-crop.svg" alt="" />
+                        </button>
+                        <button
+                            class="toolbar-button enabled"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Lock / Unlock"
+                        >
+                            <!-- src will be changed according to state  -->
+                            <!-- <img src="/assets/icons/lock.svg" alt="" /> -->
+                            <img src="/assets/icons/unlock.svg" alt="" />
+                        </button>
+                        <button
+                            class="toolbar-button enabled"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Delete"
+                        >
+                            <img src="/assets/icons/delete.svg" alt="" />
+                        </button>
+                    </div>
+                    <div>
+                        <button
+                            class="toolbar-button revert-to-original"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Revert to Original"
+                        >
+                            <img
+                                src="/assets/icons/revert-to-original.svg"
+                                alt=""
+                            />
+                        </button>
+                    </div>
                 </div>
                 <div class="designerPanel">
                     <img src="/assets/img/d.jpg" alt="" />
@@ -1113,21 +2857,23 @@
                         <img src="/assets/icons/zoom-in.svg" alt="" />
                     </button>
                 </div>
-                <div class="btn-container shadow-sm">
-                    <button
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Fit to Screen"
-                    >
+                <div
+                    class="btn-container shadow-sm"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Fit to Screen"
+                >
+                    <button>
                         <img src="/assets/icons/fit-to-screen.svg" alt="" />
                     </button>
                 </div>
-                <div class="btn-container shadow-sm">
-                    <button
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Snapping"
-                    >
+                <div
+                    class="btn-container shadow-sm active"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Snapping"
+                >
+                    <button>
                         <img src="/assets/icons/snapping.svg" alt="" />
                     </button>
                 </div>
@@ -1777,16 +3523,43 @@
             integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
             crossorigin="anonymous"
         ></script> -->
-
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
+            /**********************TOOLTIP HOVER STARTS****************************/
             document.addEventListener("DOMContentLoaded", function () {
                 var tooltipTriggerList = [].slice.call(
                     document.querySelectorAll('[data-bs-toggle="tooltip"]')
                 );
                 var tooltipList = tooltipTriggerList.map(function (element) {
-                    return new bootstrap.Tooltip(element);
+                    return new bootstrap.Tooltip(element, {
+                        delay: { show: 500, hide: 100 }
+                    });
                 });
             });
+            /**********************TOOLTIP HOVER ENDS****************************/
+
+            /**********************REVERT FUNCTION STARTS****************************/
+
+            let revertToOriginal = document.querySelector(
+                ".revert-to-original"
+            );
+            revertToOriginal.addEventListener("click", alertFunction);
+            function alertFunction() {
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "The templates will be reverted to original!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#a26dcb",
+                    cancelButtonColor: "#e03f1e",
+                    confirmButtonText: "Yes, sure!"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        console.log("trigger function");
+                    }
+                });
+            }
+            /**********************REVERT FUNCTION ENDS****************************/
         </script>
     </body>
 </html>
