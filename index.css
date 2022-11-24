@@ -354,11 +354,16 @@ body {
 .cardPage-descriptions {
     margin-left: 10px;
     display: flex;
-    flex-direction: column;
     flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardPage-descriptions div:first-child {
+    display: flex;
+    flex-direction: column;
 }
 
-.cardPage-descriptions input {
+.cardPage-descriptions div:first-child > input {
     border: none;
     width: 100%;
     font-style: italic;
@@ -368,14 +373,25 @@ body {
     background-color: #f4f4f4;
 }
 
-.cardPage-descriptions span {
+.cardPage-descriptions div:first-child span {
     font-style: italic;
     font-size: 10px;
     color: #737475;
 }
 
+.cardPage-descriptions div:nth-child(2) {
+    opacity: 0;
+}
+
+.cardPage-descriptions div:nth-child(2) label {
+    font-size: 10px;
+    margin-left: 4px;
+    color: #737475;
+}
+
 .cardPage.active .cardPage-descriptions input,
-.cardPage.active .cardPage-descriptions span {
+.cardPage.active .cardPage-descriptions span,
+.cardPage.active .cardPage-descriptions div:nth-child(2) label {
     color: #b537ab;
 }
 
@@ -387,7 +403,8 @@ body {
     opacity: 0;
 }
 
-.cardPage:hover .cardPage-selection-buttons {
+.cardPage:hover .cardPage-selection-buttons,
+.cardPage:hover .cardPage-descriptions div:nth-child(2) {
     opacity: 1;
 }
 
@@ -549,15 +566,21 @@ body {
     background-color: #e0e0e0;
 }
 
+.toolbar-button:not(:last-child) {
+    background-color: #e4e4e4;
+}
+
 .toolbar-button.enabled:not(:last-child) {
     background-color: #a26dcb;
 }
 
-.toolbar-button.enabled:not(:last-child):hover {
+.toolbar-button.enabled:not(:last-child):hover,
+.text-align-menu button:hover {
     background-color: #945cc4;
 }
 
-.toolbar-button.enabled:not(:last-child):active {
+.toolbar-button.enabled:not(:last-child):active,
+.text-align-menu button:active {
     background-color: #7f4fa4;
 }
 
@@ -601,7 +624,7 @@ body {
     position: absolute;
 }
 
-.text-align:hover .header-dropdown-menu {
+.text-align > button.enabled:hover + .header-dropdown-menu {
     display: block;
 }
 
@@ -654,7 +677,7 @@ body {
     display: block;
 }
 
-.text-leading:hover .header-dropdown-menu {
+.text-leading:hover > button.enabled:hover + .header-dropdown-menu {
     display: block;
 }
 
@@ -842,7 +865,7 @@ body {
     font-size: 13px;
     color: #737475;
     font-weight: 500;
-    padding: 5px 12px;
+    padding: 4px 12px;
     display: flex;
     align-items: center;
     border-radius: 5px;
@@ -1332,9 +1355,30 @@ input[type="range"].styled-slider::-ms-track {
     transform: translate3d(-5px, -20px, 0px) !important;
 }
 
+.footer-toolbar > div:last-child {
+    display: flex;
+}
+
+.footer-toolbar > div:last-child button {
+    padding-inline: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-toolbar > div:last-child a {
+    text-decoration: none !important;
+    font-size: 12px;
+    color: #737475;
+    font-weight: 500;
+}
+
 .swal2-actions button {
     border-radius: 7px !important;
     padding: 0.2em 1.1em !important;
+}
+.swal2-icon.swal2-warning {
+    border-color: #b537ab !important;
+    color: #b537ab !important;
 }
 
 @media screen and (min-device-width: 1920px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) /* @media only screen and (min-width: 1920px) and (max-width: 2560px) */ {
@@ -1460,11 +1504,8 @@ input[type="range"].styled-slider::-ms-track {
         margin-left: 10px;
     }
 
-    .cardPage-descriptions input {
-        font-size: 12px;
-    }
-
-    .cardPage-descriptions span {
+    .cardPage-descriptions div:first-child input,
+    .cardPage-descriptions div:first-child span {
         font-size: 12px;
     }
 
@@ -2100,11 +2141,12 @@ input[type="range"].styled-slider::-ms-track {
         margin-left: 13px;
     }
 
-    .cardPage-descriptions input {
+    .cardPage-descriptions div:first-child input {
         font-size: 14px;
     }
 
-    .cardPage-descriptions span {
+    .cardPage-descriptions div:first-child span,
+    .cardPage-descriptions div:nth-child(2) label {
         font-size: 12px;
     }
 
@@ -2621,5 +2663,9 @@ input[type="range"].styled-slider::-ms-track {
 
     .footer-toolbar .dropdown-menu.show {
         transform: translate3d(-8px, -25px, 0px) !important;
+    }
+
+    .footer-toolbar > div:last-child button {
+        padding-block: 4px;
     }
 }
